@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menu {
+    height: 100vh;
+    width: 20vw;
+    background-color: lightgrey;
+
+}
+
+.container{
+
+    width: 80vw;
+
+}
+
+.header {
+    height: 50px;
+    background-color: lightgray;
+}
+
+.header_main{
+    color: grey;
+    font-size: 18px !important;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.dashboard {
+    display: flex;
+
+}
+
+
+.totalReward {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    /* height: 30vh; */
+    margin: 10px;
+    border: 1px solid #CACACA;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.widget_header{
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+
+}
+
+.filter{
+    width: 25vw;
+    
+   
+}
+.date_selector{
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+}
+
+
+.filter label {
+    display: block;
+    font-size: 10px;
+    color: #B1B1B1;
+    margin-bottom: 5px;
+}
+
+.filter input,
+label {
+    margin: 0;
+}
+
+.calendar input{
+    height: 20px;
+    width: 120px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #DEDEDE;
+    padding: 5px;
+    color: grey;
+}
+
+.filter_button{
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #3C8DBC;
+    padding: 5px;
+    margin: 20px 0;
+    background-color:#3C8DBC ;
+    color: white;
+}
+
+.reward{
+    display: flex;
+    width: 25vw;
+    justify-content: space-between;
+    
+}
+
+.legend{
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.earned{
+    color: #3C8DBC;
+}
+
+
+.amount{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.paid{
+    color: #F4B400;
+}
+
+.dot{
+    margin-right: 5px;
+}
+
+.graph img{
+    width: 50vw;
+}
