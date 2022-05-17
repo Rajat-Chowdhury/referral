@@ -32,18 +32,21 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-grow: 1;
+    flex-grow: 1; 
+}
+
+.box-design{
     margin: 10px;
     padding: 10px;
     border: 1px solid #CACACA;
     border-radius: 10px;
- 
 }
 
 .widget-header {
     font-size: 14px;
     color: black;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .content{
@@ -144,6 +147,114 @@ body {
    height: auto;
 }
 
+.widgets{
+    display: flex;
+    justify-content: space-between;
+}
+
+.reward-summary{
+    flex-grow: 1;
+}
+
+.my-referrals{
+    flex-grow: 1; 
+    justify-content: space-between;  
+}
+
+.referral-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.referral-summary{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    background-color: #EBEBEB;
+    border-radius: 15px;
+    padding-left: 30px;
+    flex-grow: 1;
+}
+
+.referral-summary p{
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.add-referral{
+    color: white;
+    background-color: #3C8DBC;
+    border-radius: 15px;
+    border: none;
+    padding: 15px 30px;
+    margin-right: 10px;
+    
+    
+}
+.referral-history{
+    color: white;
+    background-color: #3C8DBC;
+    border-radius: 15px;
+    border: none;
+    padding: 15px 30px;
+    
+    
+}
+
+.share{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.share h5{
+    font-size: 12px;
+    margin: 10px 10px;
+    color: #858585;
+}
+.line{
+    height: 1px;
+    border-radius: 99px;
+    flex-grow: 1;
+    background-color: #92919152;
+}
+
+.share-buttons{
+    display: flex;
+    flex-direction: row;
+        
+}
+.btn-row{
+    display: flex;
+    justify-content: space-around ;
+    flex-grow: 1;
+}
+
+
+.share-btn button{
+    background-color: white;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 99px;
+    border: none;
+    padding: 15px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.share-btn i{
+    
+    font-size: 20px;
+}
+
+.share-btn p{
+    font-size: 10px;
+    color: #4E4E4E;
+    text-align: center;
+    margin-top: 5px;
+}
 
 @media only screen and (max-width: 768px){
     .header{
@@ -159,8 +270,10 @@ body {
     }
 
     .total-reward{
-        border: none;
         flex-wrap: wrap;
+    }
+    .box-design{
+        border: none;
     }
     .mobile{
         display: flex;
@@ -180,8 +293,36 @@ body {
         height: auto;
     }
     
+    .widgets{
+        display: flex;
+        flex-direction: column;
+    }
 
+    .referral-summary{
+        width: auto;
+        padding: 0;
+    }
 
+    .add-referral{
+        padding: 20px;
+        flex-grow: 1;
+    }
+
+    .referral-history{
+        padding: 20px;
+        flex-grow: 1;
+    }
+    .referral-summary p{
+        display: none;
+    }
+
+    .share-buttons{
+        flex-direction: column;
+    }
+
+    .btn-row{
+        margin: 10px 0;
+    }
 
 
 }
