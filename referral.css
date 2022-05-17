@@ -5,10 +5,31 @@
 }
 
 body {
-
     font-family: 'Open Sans', sans-serif;
 }
-
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    border-radius: 99px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 99px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
 .header {
     display: flex;
     justify-content: space-between;
@@ -96,6 +117,9 @@ body {
     background-color: #3C8DBC;
     color: white;
 }
+.filter_button:hover, .filter_button:active{
+    background-color: #2a6283;
+}
 
 .reward {
     display: flex;
@@ -137,8 +161,8 @@ body {
     padding: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    align-items: flex-end;
+    overflow: scroll;
     height: 15rem;
 }
 
@@ -190,6 +214,9 @@ body {
     margin-right: 10px;
     
     
+}
+.add-referral:hover, .referral-history:hover, .add-referral:active, .referral-history:active{
+    background-color: #2a6283;
 }
 .referral-history{
     color: white;
@@ -244,9 +271,58 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.btn:hover, .btn:active{
+    background-color: #3c8dbc20;
+}
 .share-btn i{
     
     font-size: 20px;
+}
+
+.chartArea{
+    display: flex;
+    justify-content: space-around;
+}
+
+.databox{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.data{
+    display: flex;
+}
+.icon{
+    height: 40px;
+    width: 40px;
+    background-color: #F3F3F3;
+    border-radius: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+}
+.value h5{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.value p{
+    font-size: 10px;
+    color: #B1B1B1;
+}
+
+.icon i{
+    font-size: 20px;
+}
+
+.chart canvas {
+    
+    height: 200px !important;
+    width: 200px !important;
+    
 }
 
 .share-btn p{
@@ -279,6 +355,7 @@ body {
         display: flex;
         flex-grow: 1;
         justify-content: space-between;
+        margin-top: 10px;
     }
     
     .desktop{
@@ -291,6 +368,7 @@ body {
 
     .graph{
         height: auto;
+        
     }
     
     .widgets{
@@ -324,5 +402,31 @@ body {
         margin: 10px 0;
     }
 
+    .chartArea{
+        flex-direction: column;
+    }
+    .chart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .databox{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .value h5,p {
+        text-align: center;
+    }
+
+    .chart canvas{
+        width: auto !important;
+    }
+    
 }

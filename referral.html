@@ -74,11 +74,11 @@
         </div>
       </div>
       <div class="graph">
-        <canvas id="myChart">
+        <canvas id="barChart">
           <script>
-            var myChart = new Chart("myChart", {
+            var barChart = new Chart("barChart", {
               type: "bar",
-              data: {},
+              data:{},
               options: {
                 responsive: true,
               },
@@ -106,6 +106,66 @@
     <div class="widgets">
       <div class="reward-summary box-design">
         <h2 class="widget-header">Rewards Summary</h2>
+        <div class="chartArea">
+          <div class="chart" >
+          <canvas id="pieChart" >
+            <script>
+              const data = {
+  labels: [
+    'Red',
+    'Blue',
+    'Yellow'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [300, 50, 100],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)'
+    ],
+    hoverOffset: 4
+  }]
+};
+              var pieChart = new Chart("pieChart", {
+                type: "doughnut",
+                data:data,
+                options: {
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  cutoutPercentage: 80,
+                  legend: {
+                    display: false
+                  },
+                },
+              });
+            </script>
+          </canvas>
+        </div>
+        <div class="databox">
+        <div class="data">
+          <div class="icon"><i class="fa fa-usd" aria-hidden="true" style="color: #3C8DBC"></i></div>
+          <div class="value">
+            <h5 style="color: #3C8DBC;">$500</h5>
+            <p>Paid Rewards</p>
+          </div>
+        </div>
+        <div class="data">
+          <div class="icon"><i class="fa fa-hourglass-o" aria-hidden="true" style="color: #FFD700"></i></div>
+          <div class="value">
+            <h5 style="color: #FFD700;">$500</h5>
+            <p>Pending Rewards</p>
+          </div>
+        </div>
+        <div class="data">
+          <div class="icon"><i class="fa fa-spinner"" aria-hidden="true" style="color: #DB4437"></i></div>
+          <div class="value">
+            <h5 style="color: #DB4437;">$500</h5>
+            <p>Approved/ Unpaid</p>
+          </div>
+        </div>
+        </div>
+        </div>
       </div>
       <div class="my-referrals box-design">
         <h2 class="widget-header">My Referrals</h2>
