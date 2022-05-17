@@ -8,79 +8,100 @@
     <link rel="stylesheet" href="./referral.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   </head>
   <body>
-    <div class="menu"></div>
-    <div class="container">
-      <div class="header">
-        <h1>header here</h1>
-      </div>
-      <h2 class="header_main">Referral Dashboard</h2>
-      <div class="dashboard">
-        <div class="totalReward">
-          <div class="content">
-            <h3 class="widget_header">Total Rewards Earned</h3>
-            <p
-              style="
-                font-size: 12px;
-                color: #858585;
-                font-weight: bold;
-                margin-top: 10px;
-                margin-bottom: 10px;
-              "
-            >
-              Filter
+    <div class="header">
+      <h1>Referral Dashboard</h1>
+      <i class="fa fa-user-plus" aria-hidden="true"></i>
+    </div>
+    <div class="total-reward">
+      <div class="content">
+        <h2 class="widget-header">Total Rewards Earned</h2>
+        <p>Filter</p>
+        <div class="filter">
+          <div class="date-selector">
+            <div class="calendar">
+              <label for="start">Start date:</label>
+
+              <input
+                type="date"
+                id="start"
+                name="trip-start"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2018-12-31"
+              />
+            </div>
+            <div class="calendar">
+              <label for="start">Start date:</label>
+
+              <input
+                type="date"
+                id="start"
+                name="trip-start"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2018-12-31"
+              />
+            </div>
+          </div>
+          <button type="button " class="filter_button">Filter</button>
+        </div>
+        <div class="reward desktop">
+          <div class="total-earned">
+            <p class="legend">
+              <i class="fa fa-circle dot earned" aria-hidden="true"></i>Total
+              Rewards Earned
             </p>
-            <div class="filter">
-              <div class="date_selector">
-                <div class="calendar">
-                  <label for="start">Start date:</label>
-
-                  <input
-                    type="date"
-                    id="start"
-                    name="trip-start"
-                    value="2018-07-22"
-                    min="2018-01-01"
-                    max="2018-12-31"
-                  />
-                </div>
-                <div class="calendar">
-                  <label for="start">Start date:</label>
-
-                  <input
-                    type="date"
-                    id="start"
-                    name="trip-start"
-                    value="2018-07-22"
-                    min="2018-01-01"
-                    max="2018-12-31"
-                  />
-                </div>
-              </div>
-
-              <button type="button " class="filter_button">Filter</button>
-            </div>
-            <div class="reward" >
-                <div class="total-earned">
-                   
-                    <p class="legend ">  <i class="fa fa-circle dot earned" aria-hidden="true"></i>Total Rewards Earned</p>
-                    <h3 class="amount earned">$100,000</h3>
-                </div>
-                <div class="total-paid">
-                    <p class="legend"><i class="fa fa-circle dot paid" aria-hidden="true"></i>Total Rewards Paid</p>
-                    <h3 class="amount paid">$100,000</h3>
-                </div>
-            </div>
+            <h3 class="amount earned">$100,000,000</h3>
           </div>
-          <div class="graph">
-              <img src="./Group 749.png" alt="">
+          <div class="total-paid">
+            <p class="legend">
+              <i class="fa fa-circle dot paid" aria-hidden="true"></i>Total
+              Rewards Paid
+            </p>
+            <h3 class="amount paid">$100,000,000</h3>
           </div>
+        </div>
+      </div>
+      <div class="graph">
+        <canvas id="myChart">
+          <script>
+            var myChart = new Chart("myChart", {
+              type: "bar",
+              data: {},
+              options: {
+                responsive:true
+              },
+              
+            });
+            
+          </script>
+        </canvas>
+      </div>
+      <div class="reward mobile">
+        <div class="total-earned">
+          <p class="legend">
+            <i class="fa fa-circle dot earned" aria-hidden="true"></i>Total
+            Rewards Earned
+          </p>
+          <h3 class="amount earned">$100,000,000</h3>
+        </div>
+        <div class="total-paid">
+          <p class="legend">
+            <i class="fa fa-circle dot paid" aria-hidden="true"></i>Total
+            Rewards Paid
+          </p>
+          <h3 class="amount paid">$100,000,000</h3>
         </div>
       </div>
     </div>
